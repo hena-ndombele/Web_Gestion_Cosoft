@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Cosoft-Pays</title>
+    <title>Cosoft-Partenaires</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -65,7 +65,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Ajouter</h6>
                         <a class="collapse-item" href="{{route('pays.index')}}">Pays</a>
-                        <a class="collapse-item" href="{{route('partenaires.index')}}">Partenaires</a>
+                        <a class="collapse-item" href="cards.html">Partenaires</a>
                         <a class="collapse-item" href="cards.html">Import</a>
                         <a class="collapse-item" href="cards.html">Export</a>
 
@@ -151,37 +151,38 @@
                  
 
                         <div class="card">
-                            <h1 style="text-align: center;font-weight:bolder;color:blue;">PAYS</h1>
+                            <h1 style="text-align: center;font-weight:bolder;color:blue;">PARTENAIRES</h1>
                             <div class="card-body p-0">
                                 <table id="tableFournisseur" class="table table-striped projects text-center">
                                     <thead>
                                         <th>Numero</th>
-                                        <th>Pays</th>
+                                        <th>Partenaire</th>
                                         <th>Action</th>
                                         
                                        
                                     </thead>
                                     <tbody>
-                                        @forelse($pays as $pays)
+                                        @forelse($partenaires as $partenaire)
+                                      
                                             <tr>
                                                 <td class="text-center">{{$number}}</td>
-                                                <td class="text-center">{{$pays->pays}}</td>
+                                                <td class="text-center">{{$partenaire->partenaire}}</td>
+                                               
                                     
                                                 <td>
                                                    
-                                                    </a>
-                                                    <a class="btn btn-danger btn-sm" href="" >
+                                                    
+                                                    <a class="btn btn-danger btn-sm" href="{{route('partenaires.destroy',$partenaire->id)}}" >
                                                         <i class="fas fa-trash" ></i>
                                                     </a>
                                                 </td>
                                             </tr>
                              
-
                                             @php
                                             $number++;
                                         @endphp
                                     @empty
-                                        <td colspan="12">Aucun pays</td>
+                                        <td colspan="12">Aucun partenaire </td>
                                     @endforelse
                                     </tbody>
                                 </table>
@@ -206,7 +207,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel" style="color: blue;font-weight:bolder;">Ajouter
-                            un pays</h5>
+                            un partenaire</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
@@ -214,7 +215,7 @@
                     <form action="{{route('store')}}" method="post">
                         @csrf
                         <div class="form-group mb-3">
-                       <input type="text" name="pays" class="form-control" placeholder="Entrez un pays">
+                       <input type="text" name="partenaire" class="form-control" placeholder="Entrez un partenaire">
                         </div>
                         <div>
                             <button type="submit" class="btn btn-default border float-right"><i

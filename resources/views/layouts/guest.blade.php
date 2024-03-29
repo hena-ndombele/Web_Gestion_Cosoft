@@ -16,7 +16,7 @@
     </head>
    
     <body class="font-sans text-gray-900 antialiased" style="background: blue;" >
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900" style="background: blue;" >
             <div>
                 <img src="img/logo.JFIF" alt="", width="150;" style="border-radius: 50%;">
             </div>

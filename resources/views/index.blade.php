@@ -65,7 +65,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Ajouter</h6>
                         <a class="collapse-item" href="{{route('pays.index')}}">Pays</a>
-                        <a class="collapse-item" href="cards.html">Partenaires</a>
+                        <a class="collapse-item" href="{{route('partenaires.index')}}">Partenaires</a>
                         <a class="collapse-item" href="cards.html">Import</a>
                         <a class="collapse-item" href="cards.html">Export</a>
 
@@ -86,7 +86,7 @@
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                         aria-expanded="true" aria-controls="collapseUtilities">
                         <i class="fas fa-fw fa-wrench"></i>
-                        <span>Assistance Voyage</span>
+                        <span>Pays</span>
                     </a>
 
                     <li class="nav-item">
@@ -147,15 +147,7 @@
                             </div>
                         </li>
 
-                  
-                               
-                         
-
-                 
-                             
-                     
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
+                  <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
@@ -236,11 +228,11 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">ASSISTANCE VOYAGE
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">PAYS
                                             </div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"></div>
                                                 </div>
                                               
                                             </div>
@@ -260,8 +252,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                FORMATIONS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                PARTENAIRES</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{$partenairecount}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
